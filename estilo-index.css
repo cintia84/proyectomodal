@@ -1,0 +1,371 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+body { background-color: #070707;
+}
+
+
+header {
+    background-image: url(../IMAGENES/banner.jpg) ;
+    height: 300px;
+    width: 100%;
+    background-size: cover; background-position: center ;
+    overflow: hidden;
+    color: #ffffff; /* Texto blanco */
+    padding: 20px;
+    text-align: center;
+   margin-top: 5px;
+}
+
+.logo {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    flex-direction: row; /* Alinear en columna */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: space-between; /* Centrar verticalmente */
+    background-color: #d80932;
+}
+.llamativo {
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+  .llamativo h2 {
+    font-size: 2.0em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0.1em;
+    color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+  }
+  .llamativo h2:nth-child(1) {
+    background-color: rgb(216, 222, 38);
+    animation-name: rotating-text-1;
+  }
+  @keyframes rotating-text-1 {
+    0% {
+      transform: translateY(200%);
+    }
+    80% {
+      transform: translateY(100%);
+      opacity: 1;
+    }
+    34% {
+      opacity: 0;
+    }
+  }
+  .llamativo h2:nth-child(2) {
+    background-color: tomato;
+    animation-name: rotating-text-2;
+  }
+  @keyframes rotating-text-2 {
+    50% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    40% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    67% {
+      opacity: 0;
+    }
+  }
+  .llamativo h2:nth-child(3) {
+    background-color: cornflowerblue;
+    animation-name: rotating-text-3;
+  }
+  @keyframes rotating-text-3 {
+    66% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    99% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .rotating-text-wrapper {
+      font-size: 0.7rem;
+    }
+  }
+  
+.img-logo {
+    max-width: 50px; /* Ajusta el tamaño máximo según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin:10px; /* Espacio debajo de la imagen */
+    border-radius: 20px;
+    
+}
+
+.Click {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #eedcf2; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    box-shadow: inset 0 0 0 0 #D80286;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  font-weight: bold;
+   
+}
+@keyframes moverYcambiarColor {
+  0% {
+    background-color: #ede609;
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    background-color: rgb(239, 125, 248);
+    transform: translateY(-20px) scale(1.2);
+  }
+  100% {
+    background-color: #228f0d;
+    transform: translateY(0px) scale(1);
+  }
+}
+.Click{
+    background-color: #228f0d;
+    padding: 20px;
+    border-radius: 8px;
+    animation: moverYcambiarColor 3s infinite alternate;
+}
+.Click:hover{
+    background-color: #ee6f89;
+    box-shadow: inset 0 0 0 50px #e4d2de;
+}   
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    display: inline;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    color: whitesmoke; /* Texto blanco */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.Tit-principal{
+    width: 70%;
+    height: 60px;
+    margin-left: 180px;  
+    font-size: 80px; 
+}
+
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+       
+}
+input{
+    width: 10%;
+}
+
+main {
+  background-color: #2c3e50;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+
+}
+
+#carouselExampleCaptions {
+    position: relative;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+
+.carousel-inner > .carousel-item > img {
+    height: 400px; /* Asegura que las imágenes ocupen toda la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de aspecto y recorta si es necesario */
+    width: 80%; /* Asegura que las imágenes ocupen todo el ancho */
+    background-size: cover; background-position: center ;
+    overflow: hidden;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Cambia el color de los iconos a blanco */
+}
+
+.carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.carousel-indicators .active {
+    background-color: #070707; /* Color del botón activo */
+}
+
+
+.subscription {
+    background-color: #228f0d; /* Azul claro para el fondo de suscripción */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    height: 80px;
+}
+@keyframes moverYcambiarColor {
+  0% {
+    background-color: #19d9dc;
+    transform: translateY(0px);
+  }
+  50% {
+    background-color: rgb(132, 171, 239);
+    transform: translateY(-10px);
+  }
+  100% {
+    background-color: #1b86f0;
+    transform: translateY(0px);
+  }
+}
+
+.subscription {
+  background-color: #228f0d;
+  padding: 20px;
+  border-radius: 8px;
+  animation: moverYcambiarColor 3s infinite alternate;
+}
+.contenedor-card{
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas si no caben en una */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  background-color: #2c3e50;
+  margin-bottom: 10px;
+
+}
+.card{
+   display: flex; /* Habilita Flexbox */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    justify-content: space-between; /* Espacio entre tarjetas */
+    width: 30%; /* Ajusta el ancho según tus necesidades */
+    margin: 10px; /* Añade márgenes para separar las tarjetas */
+    border: 4px solid #0e0606;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(240, 4, 4, 0.1);
+   
+}
+
+.article{
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+    flex: 1 1 calc(25% - 20px); /* Ancho flexible (4 tarjetas por fila) */
+    margin-bottom: 20px; /* Espacio entre filas */
+    padding: 15px; /* Espaciado interno */
+    height: 80px;
+    width: 20%;
+    display: flex; /* Habilita Flexbox */
+    flex-wrap: wrap
+}
+
+.card img {
+    max-width: 100%; /* Imagen responsiva */
+    border-radius: 5px; /* Bordes redondeados para imágenes */
+    border: 8px solid #0850ad;
+    border-style: groove;
+    
+}
+
+.card h2 {
+    color: #021e57; /* Color del título */
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card p {
+  background-color: #c1d9f8;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #131927;
+    width: 100%;
+}
+
+footer {
+    background-color: #d80932; /* Azul oscuro para el footer */
+    color: #ffffff; /* Texto blanco en el footer */
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+@media (max-width: 600px) {
+    
+    nav ul li {
+         display:block; /* Cambia a bloque para apilar los elementos en móviles*/
+         margin-bottom: 10px; 
+    }
+ 
+    .card {
+         width: calc(100% - 20px); /* Una tarjeta por fila en móviles*/
+    }
+ 
+    .subscription form {
+         flex-direction: column; /* Apila los elementos del formulario*/
+    }
+ 
+    .subscription input[type="email"] {
+         margin-bottom: 10px; /* Espacio entre input y botón*/
+         width:auto; 
+    }
+ 
+    .subscription button {
+         width:auto; 
+    }
+ }
+ 
+ /* Pantallas medianas (tablets) */
+ @media (min-width: 601px) and (max-width: 900px) {
+ 
+    .card {
+         width: calc(45% - 20px); /* Dos tarjetas por fila en tablets*/
+    }
+ }
