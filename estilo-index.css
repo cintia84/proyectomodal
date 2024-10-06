@@ -12,7 +12,7 @@ body { background-color: #070707;
 
 
 header {
-    background-image: url(../IMAGENES/banner.jpg) ;
+    background-image: url(banner.jpg) ;
     height: 300px;
     width: 100%;
     background-size: cover; background-position: center ;
